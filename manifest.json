@@ -1,0 +1,17 @@
+{
+  "name": "Songsterr",
+  "description": "Extension unlocking some songsterr features",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["http://*.songsterr.com/*", "https://*.songsterr.com/*"],
+      "js": ["static/js/jquery-3.6.0.min.js", "static/js/main.js"],
+      "css": ["static/css/songsterr.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "static/popup.html"
+  },
+  "permissions": ["storage", "activeTab", "scripting"]
+}
